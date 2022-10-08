@@ -3,17 +3,22 @@ import 'package:flutter_application_5/selector.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({ Key? key }) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
+
+  static const titlestyle = TextStyle(
+      color: Colors.blue,
+      fontWeight: FontWeight.w800,
+      fontFamily: 'Irs',
+      fontSize: 20,
+      letterSpacing: 0.5);
 
   @override
   Widget build(BuildContext context) {
-
     Widget example = SplashScreenView(
-
       navigateRoute: const Selector(),
       duration: 4000,
       imageSize: 200,
@@ -21,17 +26,15 @@ class MyApp extends StatelessWidget {
       imageSrc: 'images.jpeg',
       speed: 100,
       text: 'Welcome to JikJikKala',
+      textStyle: titlestyle,
       textType: TextType.TyperAnimatedText,
       backgroundColor: Colors.white,
-      
-      
-      ) ;  
-  
+    );
 
     return MaterialApp(
-      home:  example,
+      debugShowCheckedModeBanner: false,
+      home: example,
       //
-      
     );
   }
 }
