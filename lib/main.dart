@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       pageRouteTransition: PageRouteTransition.Normal,
       imageSrc: 'images.jpeg',
       speed: 100,
-      text: 'Welcome to JikJikKala',
+      text: 'به فروشگاه من خوش آمدید',
       textStyle: titlestyle,
       textType: TextType.TyperAnimatedText,
       backgroundColor: Colors.white,
