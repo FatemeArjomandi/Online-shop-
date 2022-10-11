@@ -94,6 +94,7 @@ class _MyLoginState extends State<MyLogin> {
                     Padding(
                       padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
                       child: TextField(
+                        obscureText: true,
                         textAlign: TextAlign.center,
                         style: inputTitle,
                         decoration: InputDecoration(
