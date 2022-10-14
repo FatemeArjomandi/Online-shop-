@@ -1,6 +1,6 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
-
-
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -29,6 +29,7 @@ class _MyLoginState extends State<MyLogin> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: const Text(
@@ -117,7 +118,7 @@ class _MyLoginState extends State<MyLogin> {
                         ),
                       ),
                     ),
-                     Padding(
+                    Padding(
                       padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
                       child: TextField(
                         textAlign: TextAlign.center,
@@ -132,7 +133,39 @@ class _MyLoginState extends State<MyLogin> {
                 ),
               ),
             ),
-          )
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          TextButton(
+            onPressed: () {},
+            child: const Text('ورود'),
+            style: TextButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10)),
+                backgroundColor: Colors.blue,
+                fixedSize: const Size(330, 60),
+                primary: Colors.white,
+                textStyle: const TextStyle( fontFamily: 'Irs',
+                  fontSize: 22,
+                  )
+              )
+            ),
+          const SizedBox(height: 30,),
+          TextButton(
+            onPressed: (){},
+            child: const Text('حساب کاربری ندارم'),
+            style: TextButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10)),
+              backgroundColor: Colors.white,
+              fixedSize: const Size(330, 60),
+              primary: Colors.blue,
+              textStyle:const TextStyle(
+                fontFamily: 'Irs',
+                fontSize: 20
+              )
+            ),)
         ],
       ),
     );
