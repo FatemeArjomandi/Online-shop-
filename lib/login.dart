@@ -138,34 +138,25 @@ class _MyLoginState extends State<MyLogin> {
             height: 50,
           ),
           TextButton(
-            onPressed: () {},
-            child: const Text('ورود'),
-            style: TextButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10)),
-                backgroundColor: Colors.blue,
-                fixedSize: const Size(330, 60),
-                primary: Colors.white,
-                textStyle: const TextStyle( fontFamily: 'Irs',
-                  fontSize: 22,
-                  )
-              )
-            ),
-          const SizedBox(height: 30,),
-          TextButton(
-            onPressed: (){},
-            child: const Text('حساب کاربری ندارم'),
-            style: TextButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10)),
-              backgroundColor: Colors.white,
-              fixedSize: const Size(330, 60),
-              primary: Colors.blue,
-              textStyle:const TextStyle(
-                fontFamily: 'Irs',
-                fontSize: 20
-              )
-            ),)
+              onPressed: () {},
+              child: const Text('ورود'),
+              style: TextButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  backgroundColor: Colors.blue,
+                  fixedSize: const Size(330, 60),
+                  primary: Colors.white,
+                  textStyle: const TextStyle(
+                    fontFamily: 'Irs',
+                    fontSize: 22,
+                  ))),
+          const SizedBox(
+            height: 30,
+          ),
+          const Text(
+            'حساب کاربری ندارم',
+            style: TextStyle(fontSize: 22, fontFamily: 'Irs'),
+          )
         ],
       ),
     );
