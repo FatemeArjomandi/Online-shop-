@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_5/selector.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
-import 'login.dart';
-
 void main() {
-  runApp(const MyLogin());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
