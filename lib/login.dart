@@ -95,6 +95,8 @@ class _MyLoginState extends State<MyLogin> {
                     Padding(
                       padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
                       child: TextField(
+                        maxLength: 11,
+                        keyboardType: TextInputType.phone,
                         obscureText: true,
                         textAlign: TextAlign.center,
                         style: inputTitle,
@@ -121,6 +123,9 @@ class _MyLoginState extends State<MyLogin> {
                     Padding(
                       padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
                       child: TextField(
+                        maxLength: 11,
+                        keyboardType: TextInputType.none,
+                        obscureText: true,
                         textAlign: TextAlign.center,
                         style: inputTitle,
                         decoration: InputDecoration(
@@ -143,7 +148,7 @@ class _MyLoginState extends State<MyLogin> {
               style: TextButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Colors.blueAccent,
                   fixedSize: const Size(330, 60),
                   primary: Colors.white,
                   textStyle: const TextStyle(
@@ -155,7 +160,7 @@ class _MyLoginState extends State<MyLogin> {
           ),
           const Text(
             'حساب کاربری ندارم',
-            style: TextStyle(fontSize: 22, fontFamily: 'Irs'),
+            style: inputTitle,
           )
         ],
       ),
