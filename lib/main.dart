@@ -5,7 +5,7 @@ import 'package:flutter_application_5/signup.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
 void main() {
-  runApp(const Signup());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
