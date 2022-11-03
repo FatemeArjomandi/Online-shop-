@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_5/login.dart';
 import 'package:flutter_application_5/selector.dart';
-import 'package:flutter_application_5/signup.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
 void main() {

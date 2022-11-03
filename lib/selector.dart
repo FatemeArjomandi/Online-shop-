@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_5/login.dart';
+import 'package:flutter_application_5/signup.dart';
 
 void main() {
   runApp(const Selector());
@@ -37,7 +39,9 @@ class _SelectorState extends State<Selector> {
             ),
             const SizedBox(height: 100),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: ((context) => const MyLogin())));
+              },
               child: const Text('ورود'),
               style: TextButton.styleFrom(
                 shape: RoundedRectangleBorder(
@@ -51,7 +55,9 @@ class _SelectorState extends State<Selector> {
             ),
             const SizedBox(height: 30),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: ((context) =>const Signup())));
+              },
               child: const Text('ثبت نام'),
               style: TextButton.styleFrom(
                   shape: RoundedRectangleBorder(

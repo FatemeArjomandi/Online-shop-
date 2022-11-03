@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_5/selector.dart';
+import 'package:flutter_application_5/signup.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -8,6 +10,47 @@ class MyLogin extends StatefulWidget {
 }
 
 class _MyLoginState extends State<MyLogin> {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Builder(
+        builder: (context) {
+          return Scaffold(
+            appBar: AppBar(
+              title: const Text(
+                'ورود',
+                style: TextStyle(
+                  fontFamily: 'Irs',
+                  fontSize: 20,
+                  color: Colors.black45,
+                ),
+              ),
+              centerTitle: true,
+              backgroundColor: Colors.white,
+              elevation: 0,
+              leading: InkWell(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: ((context) => const Selector())));
+                },
+                child: const Icon(
+                  Icons.arrow_back,
+                  color: Colors.black45,
+                ),
+              ),
+            ),
+            body:const LoginUI(),
+          );
+        }
+      ),
+    );
+  }
+}
+
+class LoginUI extends StatelessWidget {
+  const LoginUI({Key? key}) : super(key: key);
+
   static const inputTitle = TextStyle(
       fontFamily: 'Irs',
       fontSize: 16,
@@ -26,32 +69,6 @@ class _MyLoginState extends State<MyLogin> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'ورود',
-            style: TextStyle(
-              fontFamily: 'Irs',
-              fontSize: 20,
-              color: Colors.black45,
-            ),
-          ),
-          centerTitle: true,
-          backgroundColor: Colors.white,
-          elevation: 0,
-          leading: const Icon(
-            Icons.arrow_back,
-            color: Colors.black45,
-          ),
-        ),
-        body: LoginUI(),
-      ),
-    );
-  }
-
-  Widget LoginUI() {
     return Center(
       child: Column(
         children: <Widget>[
@@ -156,9 +173,15 @@ class _MyLoginState extends State<MyLogin> {
           const SizedBox(
             height: 30,
           ),
-          const Text(
-            'حساب کاربری ندارم',
-            style: inputTitle,
+          InkWell(
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: ((context) =>const Signup())));
+            },
+            child: const Text(
+              'حساب کاربری ندارم',
+              style: inputTitle,
+            ),
           )
         ],
       ),
