@@ -112,13 +112,20 @@ class LoginUI extends StatelessWidget {
                       child: TextField(
                         maxLength: 11,
                         keyboardType: TextInputType.phone,
-                        obscureText: true,
                         textAlign: TextAlign.center,
                         style: inputTitle,
                         decoration: InputDecoration(
-                            hintText: 'شماره موبایل',
-                            hintStyle: hintText,
-                            suffixIcon: Icon(Icons.phone_iphone)),
+                          labelStyle: hintText,
+                          labelText: 'Number Phone',
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            borderSide: BorderSide(color: Colors.blueAccent, width: 2),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            borderSide: BorderSide(color: Colors.greenAccent, width: 2)
+                          )
+                          ),
                       ),
                     ),
                     SizedBox(
@@ -144,9 +151,17 @@ class LoginUI extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: inputTitle,
                         decoration: InputDecoration(
-                            hintText: 'کلمه عبور',
-                            hintStyle: hintText,
-                            suffixIcon: Icon(Icons.lock)),
+                            
+                            labelStyle: hintText,
+                            labelText: 'Pasvord',
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                              borderSide: BorderSide(color: Colors.blueAccent, width: 2)
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                              borderSide: BorderSide(color: Colors.greenAccent, width: 2)
+                            )),
                       ),
                     ),
                   ],
