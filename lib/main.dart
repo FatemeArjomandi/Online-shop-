@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_5/home.dart';
 import 'package:flutter_application_5/selector.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Home());
 }
 
 class MyApp extends StatelessWidget {
