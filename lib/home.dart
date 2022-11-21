@@ -23,22 +23,63 @@ class _HomeState extends State<Home> {
 
   static const hintText =
       TextStyle(fontFamily: 'Irs', fontSize: 14, color: Colors.black45);
+
+  int _selectIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: AppBar(
-        title: const Text(
-          'فروشگاه من',
-          style: titleStyle,
+        appBar: AppBar(
+          title: const Text(
+            'جیک جیک کالا',
+            style: titleStyle,
+          ),
+          backgroundColor: Colors.white,
+          elevation: 5,
+          actions: <Widget>[
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.shopping_basket, color: Colors.black45),
+            )
+          ],
         ),
-        backgroundColor: Colors.white,
-        elevation: 5,
-        actions: <Widget>[
-          IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_basket, color: Colors.black45),)
-        ],
-      )),
+        bottomNavigationBar: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            backgroundColor: Colors.white,
+            elevation: 20,
+            selectedFontSize: 14,
+            selectedItemColor: Colors.teal,
+            selectedIconTheme:
+                const IconThemeData(color: Colors.teal, size: 27),
+            selectedLabelStyle: inputTitle,
+            unselectedIconTheme: const IconThemeData(size: 27),
+            unselectedLabelStyle:
+                const TextStyle(fontFamily: 'Irs', fontWeight: FontWeight.bold),
+            onTap: _onItemTapped,
+            currentIndex: _selectIndex,
+            items: const <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                icon: Icon(Icons.settings),
+                label: 'تنظیمات ',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: 'صفحه اصلی',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.shopping_basket),
+                label: 'سبد خرید',
+              ),
+            ]),
+      ),
     );
   }
 }
