@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -25,6 +26,7 @@ class _HomeState extends State<Home> {
       TextStyle(fontFamily: 'Irs', fontSize: 14, color: Colors.black45);
 
   int _selectIndex = 0;
+  int _value = 0;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -51,6 +53,7 @@ class _HomeState extends State<Home> {
             )
           ],
         ),
+        body: MainUI(),
         bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             backgroundColor: Colors.white,
@@ -81,5 +84,44 @@ class _HomeState extends State<Home> {
             ]),
       ),
     );
+  }
+
+  Widget MainUI() {
+    return Builder(builder: (context) {
+      return SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: <Widget>[
+            ImageSlideshow(
+              width: double.infinity,
+              height: 160,
+              initialPage: _value,
+              indicatorBackgroundColor: Colors.blueAccent,
+              indicatorColor: Colors.white,
+              children: <Widget>[
+                Image.asset(
+                  'slider1.jpeg',
+                  fit: BoxFit.fill,
+                ),
+                Image.asset(
+                  'slider2.jpeg',
+                  fit: BoxFit.fill,
+                ),
+                Image.asset(
+                  'slider3.jpeg',
+                  fit: BoxFit.fill,
+                ),
+                Image.asset(
+                  'slider4.jpeg',
+                  fit: BoxFit.fill,
+                ),
+              ],
+              autoPlayInterval: 6000,
+              isLoop: true,
+            )
+          ],
+        ),
+      );
+    });
   }
 }
