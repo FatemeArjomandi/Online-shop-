@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
   static const titleStyle = TextStyle(
       fontFamily: 'Irs',
       fontSize: 24,
-      color: Colors.blueAccent,
+      color: Colors.teal,
       letterSpacing: 0.5,
       fontWeight: FontWeight.w800);
 
@@ -96,28 +96,53 @@ class _HomeState extends State<Home> {
               width: double.infinity,
               height: 160,
               initialPage: _value,
-              indicatorBackgroundColor: Colors.blueAccent,
+              indicatorBackgroundColor: Colors.teal,
               indicatorColor: Colors.white,
               children: <Widget>[
                 Image.asset(
                   'slider1.jpeg',
-                  fit: BoxFit.fill,
+                  fit: BoxFit.cover,
                 ),
                 Image.asset(
                   'slider2.jpeg',
-                  fit: BoxFit.fill,
+                  fit: BoxFit.cover,
                 ),
                 Image.asset(
                   'slider3.jpeg',
-                  fit: BoxFit.fill,
+                  fit: BoxFit.cover,
                 ),
                 Image.asset(
                   'slider4.jpeg',
-                  fit: BoxFit.fill,
+                  fit: BoxFit.cover,
+                ),
+                Image.asset(
+                  'slider5.jpeg',
+                  fit: BoxFit.cover,
                 ),
               ],
               autoPlayInterval: 6000,
               isLoop: true,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            InkWell(
+              onTap: () {},
+              child: Container(
+                height: 60,
+                margin: const EdgeInsets.fromLTRB(20, 0, 30, 0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const <Widget>[
+                    Icon(Icons.arrow_back_ios_new_rounded),
+                    Text(
+                      'پرفروش ترین محصولات',
+                      style: titleStyle,
+                    ),
+                  ],
+                ),
+              ),
             )
           ],
         ),
