@@ -101,23 +101,23 @@ class _HomeState extends State<Home> {
               children: <Widget>[
                 Image.asset(
                   'slider1.jpeg',
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
                 Image.asset(
                   'slider2.jpeg',
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
                 Image.asset(
                   'slider3.jpeg',
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
                 Image.asset(
                   'slider4.jpeg',
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
                 Image.asset(
                   'slider5.jpeg',
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
               ],
               autoPlayInterval: 6000,
