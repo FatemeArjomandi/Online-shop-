@@ -53,7 +53,7 @@ class _HomeState extends State<Home> {
             )
           ],
         ),
-        body: MainUI(),
+        body: mainUI(),
         bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             backgroundColor: Colors.white,
@@ -86,7 +86,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Widget MainUI() {
+   Widget mainUI() {
     return Builder(builder: (context) {
       return SingleChildScrollView(
         scrollDirection: Axis.vertical,
