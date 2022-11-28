@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_5/product.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
 class Home extends StatefulWidget {
@@ -33,6 +34,13 @@ class _HomeState extends State<Home> {
       _selectIndex = index;
     });
   }
+
+  List<Product> items = [
+    Product('1', 'فرش ارزان چکاوک 700 شانه', 'https://www.bfarsh.com/wp-content/uploads/2022/11/%DA%86%DA%A9%D8%A7%D9%88%DA%A9-%D8%AF%D9%88%D8%AF%DB%8C.jpeg', '2550000', 'فرش 700 شانه ارزان قیمت, فرش کاشان'),
+    Product('2', 'فرش طرح دستباف اصیل ', 'https://dl.amirkabircarpet.ir/wp-uploads/2022/11/nobel-colaris-kashan-carpet.jpg', '8110000', 'کد 100903 شرابی'),
+    Product('3', 'فرش اصیل طرح 100900 فیروزه ای طرح دستباف', 'https://dl.amirkabircarpet.ir/wp-uploads/2022/06/IMG_1718.jpg', '7770000', 'کد 1056409شرابی'),
+    Product('4', 'فرش 1200 شانه طرح کرشمه نسکافه ای', 'https://dl.amirkabircarpet.ir/wp-uploads/2021/12/kereshme-1200-neskafe.jpg', '4980000', 'کد 16580903 شرابی'),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +94,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-   Widget mainUI() {
+  Widget mainUI() {
     return Builder(builder: (context) {
       return SingleChildScrollView(
         scrollDirection: Axis.vertical,
