@@ -175,7 +175,7 @@ class _HomeState extends State<Home> {
             const SizedBox(
               height: 30,
             ),
-            Container(
+            SizedBox(
               height: 310,
               child: Padding(
                 padding: const EdgeInsets.all(10),
@@ -197,6 +197,6 @@ class _HomeState extends State<Home> {
   }
 
   Widget generateItems(Product product, BuildContext context) {
-    return Card();
+    return const Card();
   }
 }
