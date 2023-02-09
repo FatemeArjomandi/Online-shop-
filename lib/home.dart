@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_5/product.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
@@ -38,25 +40,25 @@ class _HomeState extends State<Home> {
   final List<Product> items = [
     Product(
         '1',
-        'فرش ارزان چکاوک 700 شانه',
+        'فرش چکاوک 700 شانه',
         'https://www.bfarsh.com/wp-content/uploads/2022/11/%DA%86%DA%A9%D8%A7%D9%88%DA%A9-%D8%AF%D9%88%D8%AF%DB%8C.jpeg',
         '2550000',
         'فرش 700 شانه ارزان قیمت, فرش کاشان'),
     Product(
         '2',
-        'فرش طرح دستباف اصیل ',
+        'فرش  دستباف اصیل ',
         'https://dl.amirkabircarpet.ir/wp-uploads/2022/11/nobel-colaris-kashan-carpet.jpg',
         '8110000',
         'کد 100903 شرابی'),
     Product(
         '3',
-        'فرش اصیل طرح 100900 فیروزه ای طرح دستباف',
+        'فرش  فیروزه ای طرح دستباف',
         'https://dl.amirkabircarpet.ir/wp-uploads/2022/06/IMG_1718.jpg',
         '7770000',
         'کد 1056409شرابی'),
     Product(
         '4',
-        'فرش 1200 شانه طرح کرشمه نسکافه ای',
+        'فرش کرشمه نسکافه ای',
         'https://dl.amirkabircarpet.ir/wp-uploads/2021/12/kereshme-1200-neskafe.jpg',
         '4980000',
         'کد 16580903 شرابی'),
@@ -197,6 +199,46 @@ class _HomeState extends State<Home> {
   }
 
   Widget generateItems(Product product, BuildContext context) {
-    return const Card();
+    return Card(
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(10))),
+      elevation: 10,
+      child: InkWell(
+          onTap: () {},
+          child: Center(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SizedBox(
+                    width: 190,
+                    height: 170,
+                    child: Image.network(
+                      product.image,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  SizedBox(
+                    width: 220,
+                    height: 50,
+                    child: Text(
+                      product.name,
+                      textAlign: TextAlign.right,
+                      style: const TextStyle(
+                          color: Colors.black, fontSize: 18, fontFamily: 'Irs'),
+                    ),
+                  ),
+                  const SizedBox(height: 5,),
+                  SizedBox(
+                    width: 220,
+                    height: 30,
+                    child: Text(product.price, style: const TextStyle(color: Colors.green,fontFamily: 'Irs',fontSize: 18),),
+
+                  )
+                ]),
+          )),
+    );
   }
 }
