@@ -178,7 +178,7 @@ class _HomeState extends State<Home> {
               height: 30,
             ),
             SizedBox(
-              height: 310,
+              height: 320,
               child: Padding(
                 padding: const EdgeInsets.all(10),
                 child: GridView.count(
@@ -230,12 +230,38 @@ class _HomeState extends State<Home> {
                           color: Colors.black, fontSize: 18, fontFamily: 'Irs'),
                     ),
                   ),
-                  const SizedBox(height: 5,),
-                  SizedBox(
-                    width: 220,
-                    height: 30,
-                    child: Text(product.price, style: const TextStyle(color: Colors.green,fontFamily: 'Irs',fontSize: 18),),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const Divider(
+                    height: 1,
+                    thickness: 1.4,
+                    color: Colors.grey,
+                    endIndent: 15,
+                    indent: 15,
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                    child: Row(mainAxisAlignment: MainAxisAlignment.start,
 
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: [
+                          const Text('تومان',
+                              style: TextStyle(
+                                  fontFamily: 'Irs',
+                                  fontSize: 16,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold)),
+                          Text(product.price,
+                              style: const TextStyle(
+                                  fontFamily: 'Irs',
+                                  fontSize: 16,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold)),
+                        ]),
                   )
                 ]),
           )),
